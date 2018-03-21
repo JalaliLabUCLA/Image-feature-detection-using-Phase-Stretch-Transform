@@ -1,3 +1,5 @@
+% Implementation of Phase Stretch Transform (PST) in Matlab
+% author: M. Asghari, Jalali Lab, Department of Electrical and Computer Engineering,  UCLA
 function [out PST_Kernel]= PST(I,handles,Morph_flag)
 %PST or Phase Stretch Transform is an operator that finds features in an
 %   image. PST takes an intensity image I as its input, and returns a
@@ -54,7 +56,7 @@ function [out PST_Kernel]= PST(I,handles,Morph_flag)
 %      figure, imshow(out)
 %
 %   Example 2: Find the features in the Lena image. See the attached test script.
-%
+%   
 %   Copyright
 %   ---------
 %   PST function  is developed in Jalali Lab at University of California,
@@ -67,7 +69,8 @@ function [out PST_Kernel]= PST(I,handles,Morph_flag)
 %   Citations:
 %   1. M. H. Asghari, and B. Jalali, "Edge detection in digital images using dispersive phase stretch," International Journal of Biomedical Imaging, Vol. 2015, Article ID 687819, pp. 1-6 (2015).
 %   2. M. H. Asghari, and B. Jalali, "Physics-inspired image edge detection," IEEE Global Signal and Information Processing Symposium (GlobalSIP 2014), paper: WdBD-L.1, Atlanta, December 2014.
-%
+%   3. M. Suthar, H. Asghari, and B. Jalali, "Feature Enhancement in Visually Impaired Images", IEEE Access 6 (2018): 1407-1415.
+%   4. Y. Han, and B. Jalali, "Photonic time-stretched analog-to-digital converter: Fundamental concepts and practical considerations", Journal of Lightwave Technology 21, no. 12 (2003): 3085.
 %   Copyright 1992-2016 The MathWorks, Inc.
 %   $Revision: 0.0.0.1 $  $Date: 2016/02/09 13:20:56 $
 

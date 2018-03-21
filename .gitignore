@@ -1,0 +1,7 @@
+# Mac generated files
+._*
+# Matlab generated files
+*.asv
+*.m~
+# Python generated directory
+__pycache__

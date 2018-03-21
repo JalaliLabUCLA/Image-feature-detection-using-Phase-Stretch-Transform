@@ -1,11 +1,14 @@
-% test script to test PST function
+% Implementation of Phase Stretch Transform (PST) in Matlab
+% author: M. Asghari and Madhuri Suthar, Jalali Lab, Department of Electrical and Computer Engineering,  UCLA
 
 clc  % clear screen
 clear all  % clear all variables
 close all   % close all figures
 
 % import original image
-Image_orig=imread('lena_gray_512.tif');
+filename = 'cameraman.tif';
+filepath =strcat('../Test_Images/',filename);
+Image_orig=imread(filepath);
 
 % if image is a color image, convert it to grayscale
 try
@@ -43,17 +46,26 @@ if Morph_flag ==0
     subplot(1,2,2)
     imshow(Edge/max(max(Edge))*3)
     title('Detected features using PST')
-   
+    % save the image
+    file_and_extension=strsplit(filename,'.');
+    output_path=char(strcat('../Test_Images/',file_and_extension(1),'_edge.tif'));
+    imwrite(Edge/max(max(Edge))*3,output_path);
 else
     subplot(1,2,2)
     imshow(Edge)
     title('Detected features using PST')
-    
+    % save the image
+    file_and_extension=strsplit(filename,'.');
+    output_path=char(strcat('../Test_Images/',file_and_extension(1),'_edge.tif'));
+    imwrite(Edge,output_path);
     % overlay original image with detected features
     overlay = double(imoverlay(Image_orig, Edge/1000000, [1 0 0]));
     figure
     imshow(overlay/max(max(max(overlay))));
     title('Detected features using PST overlaid with original image')
+    % save the image
+    output_path=char(strcat('../Test_Images/',file_and_extension(1),'_overlay.tif'));
+    imwrite(overlay/max(max(max(overlay))),output_path);
 end
 
 % show the PST phase kernel gradient
