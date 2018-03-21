@@ -44,5 +44,5 @@ Impaired Images", IEEE Access 6 (2018): 1407-1415.
 4. Y. Han, and B. Jalali, "Photonic time-stretched analog-to-digital converter:
 Fundamental concepts and practical considerations", Journal of
 Lightwave Technology 21, no. 12 (2003): 3085.
-
+#
 	Copyright (c) 2016, Jalali Lab All rights reserved.
