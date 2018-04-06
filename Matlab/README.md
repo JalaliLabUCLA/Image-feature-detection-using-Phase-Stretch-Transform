@@ -1,6 +1,6 @@
 ## Instructions
 
-Image processing toolbox is needed to run this function, function has been tested on MATLAB R2013a on a computer with Windows 7, 64 bits operating system.  The code uses IMOVERLAY function developed by Steven L. Eddins for visualization of detected features. 
+Image processing toolbox is needed to run this function, function has been tested on MATLAB R2013a on a computer with Windows 7, 64-bit operating system.  The code uses IMOVERLAY function developed by Steven L. Eddins for visualization of detected features. 
 The test image is loaded in line #8 in the test_script_PST.m file. The test images can be called from the Test_Images directory and then, set the file name in the code on line #8. 
 The images can be color or greyscale. However, PST operation occurs on color images only after converting them to greyscale. 
 
