@@ -73,7 +73,7 @@ filepath = os.path.join(input_path,'../Test_Images/cameraman.tif')  # The images
 # [] To input filename using command line argument uncomment ^^^
 
 Image_orig = mh.imread(filepath) # Read the image.
-# To convert the color image to greyscale
+# To convert the color image to grayscale
 if Image_orig.ndim ==3:
     Image_orig_grey = mh.colors.rgb2grey(Image_orig)  # Image_orig is color image.
 else: 
@@ -113,7 +113,7 @@ if Morph_flag ==0:
     mh.imsave(output_path, Edge)
    
 else:
-    Overlay=mh.overlay(Image_orig,Edge)
+    Overlay=mh.overlay(Image_orig_grey,Edge)
   
     # Display results    
     def imshow_pair(image_pair, titles=('', ''), figsize=(10, 6), **kwargs):
